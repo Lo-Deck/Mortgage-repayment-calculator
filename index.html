@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Exercise Frontend Mentor, Mortgage repayment calculator">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <title>Frontend Mentor | Mortgage repayment calculator</title>
+    </head>
+    <body>
+
+      <main class="container">
+
+        <h1 class="sr-only">Mortgage repayment calculator</h1>
+
+        <form class="myForm" action="./index.html" method="get" novalidate>
+
+          <fieldset>
+
+            <legend class="main-title text-bold">Mortgage Calculator</legend>
+            <button class="button-reset text" type="reset">Clear All</button>
+
+            <div class="container-input">
+              <label class="text" for="amount">Mortgage Amount</label> 
+              <div class="display-input">
+                <input class="text-bold" type="tel" name="amount" id="amount" pattern="\d{1,9}" required>
+                <span class="text-bold">&#xA3;</span>
+              </div>
+            </div>
+
+            <div class="container-input">
+              <label class="text" for="term">Mortgage Term</label>
+              <div class="display-input">
+                <input class="text-bold" type="tel" name="term" id="term" pattern="\d{1,2}" required>
+                <span class="text-bold">years</span>
+              </div>
+            </div>
+
+            <div class="container-input">
+              <label class="text" for="rate">Interest Rate</label>
+              <div class="display-input">
+                <input class="text-bold" type="tel" name="rate" id="rate" pattern="\d{1,2}.\d{1,2}" required>
+                <span class="text-bold">%</span>
+              </div>
+            </div>                
+
+            <div class="container-input"> 
+              <p class="text">Mortgage Type</p>
+              <label class="label-radio text-bold" for="repayment">
+                <input type="radio" name="type" value="repayment" id="repayment" required><span>Repayment</span>
+              </label>
+              <label class="label-radio text-bold" for="interest">
+                <input type="radio" name="type" value="interest" id="interest"><span>Interest Only</span>
+              </label>
+            </div>     
+
+            <button class="button-submit text-bold" type="submit">Calculate Repayments</button>
+
+          </fieldset>
+
+        </form>
+
+        <section class="result">
+          <div class="container-text">
+            <img class="image-result" src="./images/illustration-empty.svg" alt="illustration-calculator">
+            <h2 class="title-result text-bold">Results shown here</h2>
+            <p class="text text-result">Complete the form and click “calculate repayments” to see what 
+              your monthly repayments would be.</p>
+          </div>
+        </section>
+
+      </main>        
+
+    <script  src="./script.js"></script>
+
+    </body>
+
+</html>
